@@ -59,5 +59,29 @@ checkAge();
 // More Practice
 
 // - Assign a function to a variable
+
+const addTwoNumbers = function (num1, num2) {
+  const total = num1 + num2;
+  console.log(total);
+}
+
 // - Pass a function as a parameter(argument)
+
+function anotherFunction(callback) {
+  num1 = parseInt(prompt('enter first number'));
+  num2 = parseInt(prompt('enter second number'));
+  callback(num1, num2);
+}
+
+anotherFunction(addTwoNumbers);
+
 // - Return a function from a function
+
+// function myfunction() {
+//   return function innerFunction() {
+//     return 2 * 5;
+//   };
+// }
+
+// console.log(myfunction());
+
