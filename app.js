@@ -11,8 +11,6 @@
 //    - and then `console.log()` the odd value to the console
 // BONUS: Now that you do not know exactly what number may be passed in as `count`, use an `if` statement to account for a negative `count` being passed in.
 
-// let count = prompt('Enter a non negative integer');
-
 function printOdds(count) {
   if (count < 0) {
     alert('Please enter a non negative integer');
@@ -37,10 +35,26 @@ printOdds(prompt('Enter a non negative integer'));
 // 2. The function should take in two-parameter named `userName` & `age`
 // 3. The function body should:
 //    - declare and initialize an `aboveSixteen` local variable with string value: `"Congrats ${userName}, you can drive!"`,
-//    - declare and initialize an `belowSixteen` local variable with string value: `"Sorry ${userName}, but you need to wait until you're 16."`,
+//    - declare and initialize an `belowSixteen` local variable with string value: `"Congrats ${userName}, you can drive!"`,
 //    - an `if/else` statement that determines if the `age` value is below 16,
 //    - and then `console.log()` the correct message to the console.
 // 4. BONUS: Remember that parameters are optional, and no `userName` or `age` value could be passed in. Correctly account for no parameter being passed in.
+
+function checkAge(userName = 'kid', age = 15) {
+  let aboveSixteen = `"Congrats ${userName}, you can drive!"`;
+  let belowSixteen = `"Sorry ${userName}, you can't drive!"`;
+
+  if (age < 16) {
+    console.log(belowSixteen);
+  } else {
+    console.log(aboveSixteen);
+  }
+}
+
+let userName = prompt('Enter name');
+let userAge = prompt('Enter age');
+
+checkAge();
 
 // More Practice
 
