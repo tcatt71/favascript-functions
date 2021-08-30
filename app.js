@@ -11,21 +11,23 @@
 //    - and then `console.log()` the odd value to the console
 // BONUS: Now that you do not know exactly what number may be passed in as `count`, use an `if` statement to account for a negative `count` being passed in.
 
-const count = prompt('Enter number');
+// let count = prompt('Enter a non negative integer');
 
 function printOdds(count) {
   if (count < 0) {
-    alert('Please enter a integer greater than -1');
-    break;
-  }
-  for (let i = 0; i <= count; i++) {
-    if (!(i % 2 === 0)) {
-      console.log(i);
-    } else {
-      continue;
+    alert('Please enter a non negative integer');
+  } else {
+    for (let i = 0; i <= count; i++) {
+      if (!(i % 2 === 0)) {
+        console.log(i);
+      } else {
+        continue;
+      }
     }
   }
 }
+
+printOdds(prompt('Enter a non negative integer'));
 
 // Exercise 2: Legal?
 
